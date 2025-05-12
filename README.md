@@ -24,15 +24,17 @@ The project uses the PlantDoc dataset from Kaggle:
 - RGB images of plant leaves with disease symptoms
 
 ## Repository structure 
+├── .gitignore
+
+├── Deep_Learning_Project_Final.ipynb
+
+├── LICENSE 
+
 ├── README.md
 
-├── Deep Learning Project Final.ipynb
+├── deep_learning_project_final.ipynb
 
-├── report 
-
-├── presentation 
-
-├── models 
+├── plant_disease_project_output.zip
 
 ├── report 
 
