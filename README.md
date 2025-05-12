@@ -26,7 +26,7 @@ The project uses the PlantDoc dataset from Kaggle:
 ## Repository structure 
 ├── README.md
 
-├── finished.py
+├── Deep Learning Project Final.ipynb
 
 ├── report 
 
@@ -34,9 +34,9 @@ The project uses the PlantDoc dataset from Kaggle:
 
 ├── models 
 
-├── visualizations 
+├── report 
 
-└── requirements 
+└── presentation  
 
 ## Setup and Installation 
 1. Clone the repository:
