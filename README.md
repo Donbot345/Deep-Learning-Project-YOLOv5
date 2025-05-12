@@ -14,7 +14,7 @@ The project implements YOLOv5 to detect and classify plant disease across differ
 
 ## Dataset Summary
 The project uses the PlantDoc dataset from Kaggle:
-- Source: https://www.kaggle.com/datasets/andresmgs/plantdec
+- **Source**: [PlantDec on Kaggle](https://www.kaggle.com/datasets/andresmgs/plantdec) 
 - Classes: 30 Disease classes across various plant species
 - Total Images
     - Training: 1979
@@ -32,7 +32,7 @@ The project uses the PlantDoc dataset from Kaggle:
 
 ├── README.md
 
-├── deep_learning_project_final.ipynb
+├── deep_learning_project_final.py
 
 ├── plant_disease_project_output.zip
 
@@ -76,6 +76,7 @@ drive.mount('/content/drive')
 The dataset displays significant class imbalance:
 - Most represented: Blueberry Leaf (838 instances)
 - Least represented: Tomato two-spotted spider mites leaf (2 instances)
+- Class imbalance ratio: 419:1, strongly influencing model performance
 
 ## Implementation Details 
 - Model: YOLOv5s (small variant)
@@ -99,10 +100,10 @@ Each curve shown tracks the respective metric over the 30 training epochs:
 - mAP@0.5: Steadily increasing
   
 ## Training Metrics (Final Epoch) 
-- Precision: 0.51
-- Recall: 0.25
-- mAP@0.5: 0.22
-- mAP@0.50.95: 0.14
+- Precision: 0.47
+- Recall: 0.29
+- mAP@0.5: 0.20
+- mAP@0.50.95: 0.12
 
 ## Inference Results 
 Inference was run on six randomly selected test images. The model was able to detect diseases from varying images with different lighting and orientations, with bounding boxes and class confidence scores. They were displayed using matplotlib and PIL from the prediction outputs.
@@ -119,7 +120,7 @@ Inference was run on six randomly selected test images. The model was able to de
 - Apply targeted data augmentation for underrepresented classes
   
 ## Conclusion 
-The implementation of YOLOv5 for plant disease detection demonstrates the viability of deep learning object detection for agricultural applications. The project successfully trained a YOLOv5 model to detect and classify 30 different plant disease classes and achieved an overall precision of 0.51, recall: 0.25, mAP@0.5: 0.22, and mAP@0.50.95: 0.14, with an inference speed of 6.4ms per image. 
+The implementation of YOLOv5 for plant disease detection demonstrates the viability of deep learning object detection for agricultural applications. The project successfully trained a YOLOv5 model to detect and classify 30 different plant disease classes and achieved an overall precision of 0.472, recall: 0.29, mAP@0.5: 0.202, and mAP@0.50.95: 0.114, with an inference speed of 6.4ms per image. 
 
 The analysis revealed significant variation in performance across different disease classes. There was a clear correlation between class representation in the training dataset and detection accuracy. So high-performing classes like Corn rust leaf (mAP@0.5: 0.723) typically featured distinctive visual characteristics and abundant training samples, while underperforming classes like Tomato Early blight leaf (mAP@0.5: 0.027) suffered from visual similarity to other diseases and limited representation in the dataset.
 
